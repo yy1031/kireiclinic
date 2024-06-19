@@ -1,0 +1,175 @@
+@use "variable";
+
+
+.reason{
+   background-color: variable.$base-color;
+}
+
+.reason-list{
+   width: 100%;
+   margin-bottom: 96px;
+   @include variable.mq(tab){
+      margin-bottom: 80px;
+   }
+   @include variable.mq(){
+      margin-bottom: 60px;
+   }
+}
+
+.reason-item{
+   display: flex;
+   width: 100%;
+   background: #fff;
+   border-radius: 20px;
+   height: 260px;
+   box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.1);
+
+   &:not(:first-child){
+      margin-top: 40px;
+   }
+
+   @include variable.mq(){
+      display: block;
+      max-width: 100%;
+      width: 280px;
+      margin: auto;
+      height: auto;
+      &:not(:first-child){
+         margin-top: 30px;
+      }
+   }
+}
+
+.reason-item-img{
+   width: calc(340 / 820 * 100%);
+   img{
+      border-radius: 20px 0 0 20px;
+      @include variable.mq(){
+         border-radius: 20px 20px 0 0;
+      }
+   }
+
+   @include variable.mq(){
+      width: 100%;
+      height: 160px;
+   }
+}
+
+.reason-item-2{
+   flex-direction: row-reverse;
+   .reason-item-img{
+      img{
+         border-radius: 0 20px 20px 0;
+
+         @include variable.mq(){
+            border-radius: 20px 20px 0 0;
+         }
+      }
+   }
+}
+
+.reason-item-text{
+   width: calc(480 / 820 * 100%);
+   padding: 40px 34px;
+
+   @include variable.mq(tab){
+      padding: 32px 28px;
+   }
+
+   @include variable.mq(){
+      width: 100%;
+      padding: 30px 24px;
+   }
+}
+
+.reason-item-title{
+   color: variable.$accent-color;
+   font-weight: 400;
+   font-size: 22px;
+   margin-bottom: 26px;
+   border-bottom: 1px solid variable.$accent-color;
+   padding-bottom: 14px;
+   letter-spacing: .1em;
+
+   @include variable.mq(tab){
+      font-size: 18px;
+   }
+
+   @include variable.mq(){
+      font-size: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      text-align: center;
+   }
+}
+
+.reason-item-disc{
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 1.5;
+   text-align: left;
+
+   @include variable.mq(tab){
+      font-size: 12px;
+   }
+   @include variable.mq(){
+      font-size: 11px;
+   }
+}
+
+.reason-item-1, .reason-item-2, .reason-item-3{
+   position: relative;
+}
+
+.reason-item-num{
+   position: absolute;
+   color: variable.$accent-color;
+   font-size: 68px;
+   font-family: variable.$font-en;
+   font-weight: 500;
+   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+
+   @include variable.mq(tab){
+      font-size: 60px;
+   }
+
+   @include variable.mq(){
+      font-size: 42px;
+   }
+
+}
+
+.reason-item-1,.reason-item-3{
+   .reason-item-num{
+      top: -30px;
+      left: -32px;
+
+      @include variable.mq(tab){
+         top: -26px;
+         left: -26px;
+      }
+
+      @include variable.mq(){
+         top: -14px;
+         left: -16px;
+      }
+   }
+}
+
+.reason-item-2{
+   .reason-item-num{
+      top: -30px;
+      right: -32px;
+
+      @include variable.mq(tab){
+         top: -26px;
+         right: -26px;
+      }
+
+      @include variable.mq(){
+         top: -14px;
+         right: 0;
+         left: -16px;
+      }
+   }
+}

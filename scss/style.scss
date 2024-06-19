@@ -1,0 +1,220 @@
+@use "variable";
+@use "header";
+@use "top";
+@use "reason";
+@use "plan";
+@use "flow";
+@use "faq";
+@use "clinics";
+@use "footer";
+
+body{
+   font-family: variable.$font-ja;
+   color: #6f6f6f;
+   font-size: 14px;
+   letter-spacing: .1em;
+}
+
+section{
+   padding-top: 160px;
+   padding-bottom: 160px;
+   @include variable.mq(tab){
+      padding-top: 120px;
+      padding-bottom: 100px;
+   }
+   @include variable.mq(){
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+}
+.container{
+   max-width: 1220px;
+   margin: auto;
+   padding: 0 50px;
+   @include variable.mq(tab){
+      max-width: 980px;
+      padding: 0 40px;
+   }
+   @include variable.mq(){
+      padding: 0 15px;
+      max-width: 100%;
+   }
+}
+.container-narrow{
+   max-width: 1020px;
+   @include variable.mq(tab){
+    max-width: 820px;
+   }
+   @include variable.mq(){
+      max-width: 100%;
+   }
+}
+
+.section-title{
+   text-align: center;
+   margin-bottom: 80px;
+   position: relative;
+   @include variable.mq(tab){
+      margin-bottom: 64px;
+   }
+   @include variable.mq(){
+      margin-bottom: 46px;
+   }
+
+   &.-left{
+      text-align: left;
+   }
+
+}
+.section-title-en{
+   font-family: variable.$font-en;
+   font-size: 46px;
+   letter-spacing: .3em;
+   color: variable.$key-color;
+   margin-bottom: 6px;
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+
+   @include variable.mq(tab){
+      font-size: 38px;
+   }
+   @include variable.mq(){
+      font-size: 26px;
+      margin-bottom: 3px;
+      display: block;
+   }
+}
+.section-title-ja{
+   font-weight: 300;
+   font-size: 16px;
+
+   @include variable.mq(tab){
+      font-size: 16px;
+   }
+   @include variable.mq(){
+      font-size: 14px;
+   }
+}
+
+.section-title-right{
+   text-align: right;
+
+   .section-title-ja{
+      margin-right: 12px;
+      @include variable.mq(){
+         margin-right: 0;
+      }
+   }
+   .section-title-en{
+
+      &::before{
+         content: "";
+         height: 1px;
+         flex-grow: 1;
+         background-color: variable.$key-color;
+         margin-right: 34px;
+         @include variable.mq(){
+            display: none;
+         }
+      }
+   }
+
+   @include variable.mq(){
+      text-align: center;
+
+   }
+}
+
+.section-title-left{
+   text-align: left;
+
+   .section-title-en{
+
+      &::after{
+         content: "";
+         height: 1px;
+         flex-grow: 1;
+         background-color: variable.$key-color;
+         margin-left: 34px;
+      }
+   }
+   @include variable.mq(){
+      text-align: center;
+      .section-title-en{
+         &::after{
+            display: none;
+         }
+      }
+   }
+}
+
+
+.button{
+   text-align: center;
+
+   a{
+      text-align: center;
+      display: inline-block;
+      color: #fff;
+      background-color: variable.$accent-color;
+      padding: 20px 0;
+      width: 340px;
+      font-size: 18px;
+      position: relative;
+      border-radius: 50px;
+      border: 1px solid variable.$accent-color;
+
+
+      @include variable.mq(tab){
+         padding: 16px 0;
+         font-size: 16px;
+      }
+
+      @include variable.mq(){
+         padding: 14px 0;
+         max-width: 100%;
+         font-size: 14px;
+      }
+      &::after{
+         position: absolute;
+         content: "";
+         width: 10px;
+         height: 10px;
+         border-top: 1px solid #fff;
+         border-right: 1px solid #fff;
+         transform: rotate(45deg) translateY(-50%);
+         top: 50%;
+         right: 34px;
+         transition: .3s all;
+
+         @include variable.mq(){
+            width: 8px;
+            height: 8px;
+         }
+      }
+
+      &:hover{
+         &::after{
+            right: 28px;
+         }
+      }
+   }
+}
+
+a{
+   transition: .3s all;
+
+   &:hover{
+      opacity: .7;
+   }
+}
+
+.is-pc{
+   @include variable.mq(tab){
+      display: none;
+   }
+   @include variable.mq(){
+      display: none;
+   }
+}

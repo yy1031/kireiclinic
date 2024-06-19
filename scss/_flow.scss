@@ -1,0 +1,117 @@
+@use "variable";
+
+
+.flow{
+   background: linear-gradient(180deg, #f2bf80 0%, #f2bf80 64%, #fff3e9 64%,#fff3e9 100%);
+
+   @include variable.mq(){
+      background: linear-gradient(180deg, #f2bf80 0%, #f2bf80 68%, #fff3e9 68%,#fff3e9 100%);
+
+   }
+   .section-title{
+      .section-title-en{
+         color: #fff;
+         &::before{
+            background-color: #fff;
+         }
+      }
+   }
+   .container{
+      @include variable.mq(){
+         padding: 0 30px;
+      }
+   }
+}
+
+.flow-wrap{
+   background-color: #fff;
+   border-radius: 20px;
+   padding: 60px 80px;
+   @include variable.mq(tab){
+      padding: 40px 50px;
+   }
+   @include variable.mq(){
+      padding: 40px 32px;
+   }
+}
+
+.flow-list{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 52px;
+   @include variable.mq(tab){
+      margin-bottom: 36px;
+   }
+   @include variable.mq(){
+      display: block;
+   }
+}
+
+.flow-item{
+   text-align: center;
+   width: 170 / 920 * 100%;
+   @include variable.mq(){
+      width: 100%;
+   }
+}
+
+.flow-item-img{
+   width: 120px;
+   aspect-ratio: 1 / 1;
+   border: 2px solid #666;
+   border-radius: 100px;
+   margin: 0 auto 22px;
+   position: relative;
+   img{
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+   }
+   @include variable.mq(tab){
+      width: 100%;
+   }
+   @include variable.mq(){
+      margin-bottom: 14px;
+   }
+}
+
+.flow-item-title{
+   font-size: 18px;
+   margin-bottom: 14px;
+   @include variable.mq(tab){
+      font-size: 12px;
+   }
+   @include variable.mq(){
+      font-size: 14px;
+      margin-bottom: 10px;
+   }
+}
+
+.flow-item-disc{
+   font-size: 13px;
+   font-weight: 300;
+   line-height: 1.5;
+   @include variable.mq(tab){
+      font-size: 10px;
+   }
+}
+
+.flow-arrow{
+   font-size: 20px;
+   color: variable.$accent-color;
+   margin-top: 49px;
+
+   @include variable.mq(){
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      span{
+         display: inline-block;
+         rotate: 90deg;
+      }
+   }
+}

@@ -1,0 +1,189 @@
+@use "variable";
+
+
+footer{
+   background-color: variable.$base-color;
+   padding: 60px 0;
+
+   @include variable.mq(){
+      text-align: center;
+      padding-bottom: 30px;
+   }
+}
+
+.footer-flex, .footer-flex2{
+   display: flex;
+   justify-content: space-between;
+
+   @include variable.mq(){
+      display: block;
+   }
+}
+
+.footer-flex{
+   margin-bottom: 34px;
+   align-items: baseline;
+   @include variable.mq(){
+      margin-bottom: 48px;
+   }
+}
+.footer-flex2{
+   align-items: center;
+   margin-bottom: 70px;
+
+   @include variable.mq(){
+      margin-bottom: 86px;
+   }
+}
+.footer-logo{
+   font-size: 26px;
+   color: variable.$accent-color;
+   font-weight: 600;
+   span{
+      font-size: 39px;
+   }
+
+   @include variable.mq(tab){
+      font-size: 18px;
+      span{
+         font-size: 24px;
+      }
+   }
+
+   @include variable.mq(){
+      margin-bottom: 20px;
+      font-size: 20px;
+      span{
+         font-size: 30px;
+      }
+   }
+}
+.footer-nav{
+   display: flex;
+   gap: 28px;
+
+   @include variable.mq(tab){
+     gap: 16px;
+   }
+
+   @include variable.mq(){
+      display: block;
+   }
+}
+.footer-nav-item{
+   a{
+      @include variable.mq(tab){
+         font-size: 12px;
+      }
+   }
+
+   @include variable.mq(){
+      font-size: 12px;
+      &:not(:first-child){
+         margin-top: 24px;
+      }
+   }
+}
+
+.footer-nav2{
+   display: flex;
+   gap: 20px;
+   height: 16px;
+
+   @include variable.mq(tab){
+      gap: 10px;
+   }
+
+   @include variable.mq(){
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0;
+      padding: 0 20px;
+   }
+
+
+}
+
+.footer-nav2-item{
+   a{
+      font-size: 12px;
+      font-weight: 300;
+   }
+
+   &:not(:first-child){
+      padding-left: 20px;
+      border-left: 1px solid #666;
+      line-height: 16px;
+      @include variable.mq(tab){
+         padding-left: 10px;
+      }
+   }
+}
+
+.footer-nav2{
+   .footer-nav2-item{
+      @include variable.mq(){
+         border: none;
+         width: 50%;
+         padding-left: 0;
+   
+         &:nth-child(n + 2){
+            margin-bottom: 10px;
+         }
+   
+         a{
+            font-size: 10px;
+         }
+      }
+   
+   }
+}
+
+.footer-button{
+   a{
+      color: #fff;
+      font-size: 16px;
+      background-color: variable.$accent-color;
+      padding: 10px 24px;
+      border-radius: 40px;
+      
+      @include variable.mq(tab){
+         font-size: 14px;
+      }
+   }
+
+   @include variable.mq(){
+      display: none;
+   }
+}
+
+.footer-copyright{
+   text-align: right;
+   font-size: 10px;
+   font-weight: 300;
+
+   @include variable.mq(){
+      text-align: center;
+   }
+}
+
+.footer-button-sp{
+   display: none;
+   margin-bottom: 40px;
+   a{
+      color: #fff;
+      font-size: 14px;
+      background-color: variable.$accent-color;
+      padding: 10px 22px;
+      border-radius: 40px;
+      display: inline-block;
+
+      @include variable.mq(tab){
+         font-size: 14px;
+      }
+   }
+
+   @include variable.mq(){
+      display: block;
+   }
+}

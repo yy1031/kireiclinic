@@ -1,0 +1,169 @@
+@use "variable";
+
+.plan{
+   .container{
+      @include variable.mq(){
+         padding: 0 30px;
+      }
+   }
+}
+
+.plan-list{
+   display: flex;
+   margin-bottom: 96px;
+   gap: 36px;
+   flex-wrap: wrap;
+   justify-content: center;
+
+   @include variable.mq(tab){
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 80px;
+   }
+   @include variable.mq(){
+      display: block;
+      margin-bottom: 60px;
+   }
+}
+.plan-item{
+   width: 313px;
+   background-color: variable.$base-color;
+   padding: 20px 25px;
+   border-radius: 20px;
+   box-shadow: 3px 3px 8px 0px rgba(152, 108, 72, .24);
+
+   @include variable.mq(tab){
+      width: 313px;
+   }
+
+   @include variable.mq(){
+      margin: 0 auto;
+      padding: 18px;
+      width: 280px;
+      max-width: 100%;
+      &:not(:first-child){
+         margin-top: 30px;
+      }
+   }
+}
+
+.plan-item-title{
+   display: flex;
+   padding: 0 15px 13px;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #666;
+   margin-bottom: 14px;
+   @include variable.mq(){
+      padding-bottom: 10px;
+   }
+}
+
+.plan-item-title-left{
+   font-size: 20px;
+   @include variable.mq(){
+      font-size: 18px;
+   }
+}
+
+.plan-item-title-right{
+   font-size: 16px;
+   color: #fff;
+   background-color: variable.$accent-color;
+   width: 60px;
+   height: 60px;
+   border-radius: 50px;
+   text-align: center;
+   padding-top: 13px;
+   span{
+      font-size: 34px;
+      font-family: variable.$font-en;
+      margin-right: 1px;
+   }
+
+   @include variable.mq(){
+      width: 50px;
+      height: 50px;
+      padding-top: 11px;
+      font-size: 15px;
+      span{
+         font-size: 30px;
+      }
+   }
+}
+
+.plan-item-price1{
+   font-weight: 500;
+   margin-bottom: 12px;
+}
+
+.plan-item-price1-left{
+   text-align: center;
+   margin-bottom: 8px;
+}
+
+.plan-item-price1-right{
+   text-align: right;
+
+   @include variable.mq(){
+      font-size: 11px;
+   }
+
+   strong{
+      font-weight: 500;
+      font-size: 48px;
+      font-family: variable.$font-en;
+      color: variable.$accent-color;
+      position: relative;
+
+      @include variable.mq(){
+         font-size: 42px;
+      }
+
+      &::after{
+         position: absolute;
+         content: "";
+         height: 11px;
+         width: 100%;
+         background-color: rgba(#666, 0.2);
+         bottom: 6px;
+         left: 0;
+      }
+   }
+}
+
+.plan-item-price2{
+   font-weight: 500;
+   text-align: center;
+   margin-bottom: 16px;
+   span{
+      font-size: 18px;
+      margin-right: 2px;
+
+      strong{
+         font-size: 30px;
+         font-weight: 500;
+         font-family: variable.$font-en;
+      }
+   }
+
+   @include variable.mq(){
+      font-size: 12px;
+      margin-bottom: 10px;
+      span{
+         strong{
+            font-size: 26px;
+         }
+      }
+   }
+}
+
+.plan-item-disc{
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 1.5;
+   @include variable.mq(){
+      font-size: 12px;
+   }
+}

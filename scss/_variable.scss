@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+
+$font-ja: 'Zen Kaku Gothic New', sans-serif;
+$font-en: 'Roboto', sans-serif;
+
+$base-color: #fff3e9;
+$accent-color: #f28322;
+$key-color :#f24c27;
+
+$breakpoints: (
+  'sp': "(max-width: 767px)",
+  'tab': "(min-width: 768px) and (max-width:1279px)",
+  'pc': "(min-width: 1280px)"
+) !default;
+
+@mixin mq($breakpoint: sp) {
+   @media #{map-get($breakpoints, $breakpoint)} {
+ @content;
+}
+}
