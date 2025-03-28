@@ -70,10 +70,10 @@
 
 .reason-item-text{
    width: calc(480 / 820 * 100%);
-   padding: 40px 34px;
+   padding: 24px 34px;
 
    @include variable.mq(tab){
-      padding: 32px 28px;
+      padding: 22px 28px;
    }
 
    @include variable.mq(){
@@ -85,14 +85,15 @@
 .reason-item-title{
    color: variable.$accent-color;
    font-weight: 400;
-   font-size: 22px;
-   margin-bottom: 26px;
-   border-bottom: 1px solid variable.$accent-color;
+   font-size: 28px;
    padding-bottom: 14px;
    letter-spacing: .1em;
+   display: flex;
+   align-items: center;
+   gap: 14px;
 
    @include variable.mq(tab){
-      font-size: 18px;
+      font-size: 22px;
    }
 
    @include variable.mq(){
@@ -122,12 +123,10 @@
 }
 
 .reason-item-num{
-   position: absolute;
-   color: variable.$accent-color;
+   color: #f2bf80;
    font-size: 68px;
    font-family: variable.$font-en;
-   font-weight: 500;
-   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+   font-weight: 600;
 
    @include variable.mq(tab){
       font-size: 60px;

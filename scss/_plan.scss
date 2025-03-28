@@ -1,6 +1,7 @@
 @use "variable";
 
 .plan{
+   overflow: hidden;
    .container{
       @include variable.mq(){
          padding: 0 30px;

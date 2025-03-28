@@ -180,7 +180,7 @@ h1.logo span {
 
 .top {
   background: url(../img/28372402_m.jpg) no-repeat left top/104%;
-  padding-top: 100px;
+  padding-top: 110px;
   padding-bottom: 100px;
   font-weight: 300;
   margin-top: 86px;
@@ -216,21 +216,15 @@ h1.logo span {
 }
 
 .top-title {
-  font-size: 40px;
+  font-size: clamp(24px, 3.2vw, 46px);
   line-height: 1.5;
   margin-bottom: 48px;
 }
 .top-title span {
   color: #f28322;
 }
-@media (min-width: 768px) and (max-width:1279px) {
-  .top-title {
-    font-size: 28px;
-  }
-}
 @media (max-width: 767px) {
   .top-title {
-    font-size: 24px;
     margin-bottom: 100px;
   }
 }
@@ -613,11 +607,11 @@ h1.logo span {
 
 .reason-item-text {
   width: 58.5365853659%;
-  padding: 40px 34px;
+  padding: 24px 34px;
 }
 @media (min-width: 768px) and (max-width:1279px) {
   .reason-item-text {
-    padding: 32px 28px;
+    padding: 22px 28px;
   }
 }
 @media (max-width: 767px) {
@@ -630,15 +624,16 @@ h1.logo span {
 .reason-item-title {
   color: #f28322;
   font-weight: 400;
-  font-size: 22px;
-  margin-bottom: 26px;
-  border-bottom: 1px solid #f28322;
+  font-size: 28px;
   padding-bottom: 14px;
   letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 @media (min-width: 768px) and (max-width:1279px) {
   .reason-item-title {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 @media (max-width: 767px) {
@@ -672,12 +667,10 @@ h1.logo span {
 }
 
 .reason-item-num {
-  position: absolute;
-  color: #f28322;
+  color: #f2bf80;
   font-size: 68px;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
 }
 @media (min-width: 768px) and (max-width:1279px) {
   .reason-item-num {
@@ -725,6 +718,9 @@ h1.logo span {
   }
 }
 
+.plan {
+  overflow: hidden;
+}
 @media (max-width: 767px) {
   .plan .container {
     padding: 0 30px;
@@ -1039,6 +1035,7 @@ h1.logo span {
 .faq {
   background-color: #fff3e9;
   padding-top: 40px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .faq {
@@ -1508,7 +1505,7 @@ section {
 }
 
 .container-narrow {
-  max-width: 1020px;
+  max-width: 920px;
 }
 @media (min-width: 768px) and (max-width:1279px) {
   .container-narrow {
@@ -1580,6 +1577,7 @@ section {
 
 .section-title-right {
   text-align: right;
+  margin-left: -50vw;
 }
 .section-title-right .section-title-ja {
   margin-right: 12px;
@@ -1609,6 +1607,7 @@ section {
 
 .section-title-left {
   text-align: left;
+  margin-right: -50vw;
 }
 .section-title-left .section-title-en::after {
   content: "";

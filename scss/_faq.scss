@@ -4,6 +4,7 @@
 .faq{
    background-color: variable.$base-color;
    padding-top: 40px;
+   overflow: hidden;
 
    @include variable.mq(){
       padding-top: 20px;
